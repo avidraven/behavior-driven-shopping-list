@@ -22,4 +22,12 @@ class ShoppingList {
   constructor(){
     this.items = [];
   }
+
+  addItem(item){
+    if(item instanceof ShoppingListItem){
+      this.item.push(iten);
+    } else {
+      throw Error("item should not be in list");
+    }
+  }
 }
