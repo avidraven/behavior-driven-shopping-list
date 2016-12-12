@@ -50,4 +50,8 @@ describe('ShoppingList', () => {
   it("expect items to be in array", () => {
     expect(list.items).to.be.an("array");
   });
+
+  it("should have addItem method", () => {
+    expect(list.addItem).should.be.a.function;
+  });
 });
