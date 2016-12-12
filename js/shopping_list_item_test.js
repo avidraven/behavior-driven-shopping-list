@@ -34,3 +34,13 @@ describe("ShoppingListItem", () =>{
     expect(listItem.constructor).to.have.length(2);
   });
 });
+
+describe('ShoppingList', () => {
+
+  let list = new ShoppingList();
+
+  it("should be a class", () => {
+
+  });
+
+});
