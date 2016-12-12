@@ -32,11 +32,11 @@ class ShoppingList {
   }
 
   removeItem(item){
-    if(arguments === 0){
+    if(arguments.length === 0){
       this.items.pop();
     } else if(item instanceof ShoppingListItem) {
-      if(this.items.indexof(item) < -1){
-        this.items.splice(this.items.indexof(items), 1);
+      if(this.items.indexOf(item) > -1){
+        this.items.splice(this.items.indexOf(item), 1);
       }
     } else {
       throw Error("item should not be in list");
