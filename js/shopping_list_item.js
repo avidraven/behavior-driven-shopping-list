@@ -25,7 +25,7 @@ class ShoppingList {
 
   addItem(item){
     if(item instanceof ShoppingListItem){
-      this.item.push(iten);
+      this.items.push(item);
     } else {
       throw Error("item should not be in list");
     }
