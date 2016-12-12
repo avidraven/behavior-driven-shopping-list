@@ -42,4 +42,8 @@ class ShoppingList {
       throw Error("item should not be in list");
     }
   }
+
+  render(){
+
+  }
 }
