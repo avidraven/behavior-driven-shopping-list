@@ -40,7 +40,10 @@ describe('ShoppingList', () => {
   let list = new ShoppingList();
 
   it("should be a class", () => {
-
+    list.should.be.a.function;
   });
 
+  it("expect ShoppingList to have a items", () => {
+    expect(list).to.have.property("items");
+  });
 });
