@@ -39,6 +39,7 @@ describe('ShoppingList', () => {
 
   let list = new ShoppingList();
   let myList = new ShoppingListItem("pizza", "cold");
+  let myOtherList = new ShoppingListItem("Krispy Kreme", "warm");
 
   it("should be a class", () => {
     list.should.be.a.function;
@@ -57,14 +58,29 @@ describe('ShoppingList', () => {
   });
 
   it("should have argument of ShoppingListItem and adds it to list", () => {
-    // var testResult = list.add('test');
     list.addItem(myList);
-    console.log(list.items[0]);
+    // console.log(list.items[0]);
     list.items.should.contain(myList);
   });
 
   it("should have removeItem method", () => {
     expect(list.removeItem).should.be.a.function;
+  });
+
+  it("should have argument of ShoppingListItem and removes it from list", () => {
+    list.addItem(myList);
+    list.addItem(myOtherList);
+    // console.log('should have two added ',list);
+    list.removeItem(myList);
+    console.log('should have one left ',list);
+    list.items.should.not.contain(myList);
+  });
+
+  it("should remove last item if no paramaters", () => {
+    list.addItem(myList);
+    list.addItem(myOtherList);
+    list.removeItem();
+    list.items.should.not.contain(myOtherList);
   });
 
   it("should have a method render", () => {
