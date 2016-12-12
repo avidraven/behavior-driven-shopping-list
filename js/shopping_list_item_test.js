@@ -54,4 +54,8 @@ describe('ShoppingList', () => {
   it("should have addItem method", () => {
     expect(list.addItem).should.be.a.function;
   });
+
+  it("should have removeItem method", () => {
+    expect(list.removeItem).should.be.a.function;
+  });
 });
