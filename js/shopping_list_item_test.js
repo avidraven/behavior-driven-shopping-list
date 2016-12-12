@@ -46,4 +46,8 @@ describe('ShoppingList', () => {
   it("expect ShoppingList to have a items", () => {
     expect(list).to.have.property("items");
   });
+
+  it("expect items to be in array", () => {
+    expect(list.items).to.be.an("array");
+  });
 });
