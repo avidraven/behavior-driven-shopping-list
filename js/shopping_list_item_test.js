@@ -58,4 +58,8 @@ describe('ShoppingList', () => {
   it("should have removeItem method", () => {
     expect(list.removeItem).should.be.a.function;
   });
+
+  it("should have a method render", () => {
+    list.render.should.be.a.function;
+  });
 });
