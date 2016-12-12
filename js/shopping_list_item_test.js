@@ -38,6 +38,7 @@ describe("ShoppingListItem", () =>{
 describe('ShoppingList', () => {
 
   let list = new ShoppingList();
+  let myList = new ShoppingListItem("pizza", "cold");
 
   it("should be a class", () => {
     list.should.be.a.function;
@@ -53,6 +54,13 @@ describe('ShoppingList', () => {
 
   it("should have addItem method", () => {
     expect(list.addItem).should.be.a.function;
+  });
+
+  it("should have argument of ShoppingListItem and adds it to list", () => {
+    // var testResult = list.add('test');
+    list.addItem(myList);
+    console.log(list.items[0]);
+    list.items.should.contain(myList);
   });
 
   it("should have removeItem method", () => {
