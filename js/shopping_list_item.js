@@ -30,4 +30,16 @@ class ShoppingList {
       throw Error("item should not be in list");
     }
   }
+
+  removeItem(item){
+    if(arguments === 0){
+      this.items.pop();
+    } else if(item instanceof ShoppingListItem) {
+      if(this.items.indexof(item) < -1){
+        this.items.splice(this.items.indexof(items), 1);
+      }
+    } else {
+      throw Error("item should not be in list");
+    }
+  }
 }
