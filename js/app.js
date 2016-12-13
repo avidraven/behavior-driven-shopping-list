@@ -10,5 +10,13 @@ function add_to_shopping_list() {
 }
 
 function changeCheckedStatus(idx, checkbox) {
-  // body...
+  var item = ShoppingListItem.item[idx];
+  //if the checkbox is checked, invoke shopping_list_items check()
+  if(checkbox.checked() === true){
+    item.check();
+  } else {
+  //if the checkbox is not checked, invoke the shopping_list_items check()
+    item.uncheck();
+  }
 }
+
