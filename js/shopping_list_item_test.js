@@ -61,9 +61,12 @@ describe("ShoppingListItem", () =>{
 
 describe('ShoppingList', () => {
 
-  let list = new ShoppingList();
-  let myList = new ShoppingListItem("pizza", "cold");
-  let myOtherList = new ShoppingListItem("Krispy Kreme", "warm");
+  let list;
+  let myList;
+  beforeEach(() => {
+    list = new ShoppingList();
+    myList = new ShoppingListItem("pizza", "cold");
+  });
 
   it("should be a class", () => {
     list.should.be.a.function;
@@ -92,15 +95,17 @@ describe('ShoppingList', () => {
   });
 
   it("should have argument of ShoppingListItem and removes it from list", () => {
+    let myOtherList = new ShoppingListItem("Krispy Kreme", "warm");
     list.addItem(myList);
     list.addItem(myOtherList);
     // console.log('should have two added ',list);
     list.removeItem(myList);
-    console.log('should have one left ',list);
+    // console.log('should have one left ',list);
     list.items.should.not.contain(myList);
   });
 
   it("should remove last item if no paramaters", () => {
+   let myOtherList = new ShoppingListItem("Krispy Kreme", "cold");
     list.addItem(myList);
     list.addItem(myOtherList);
     list.removeItem();
@@ -108,6 +113,7 @@ describe('ShoppingList', () => {
   });
 
   it("should have a method render", () => {
-    list.render.should.be.a.function;
+    expect(myList.render).should.be.a.function;
+    expect(myList.render()).to.equal('<li class="completed_' + this.is_done + '"><span>' + this.name + '</span><span>' + this.description + '</span></li>)');
   });
 });
