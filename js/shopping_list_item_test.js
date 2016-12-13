@@ -36,6 +36,27 @@ describe("ShoppingListItem", () =>{
   it("expect item constructor to take 2 arguments", () =>{
     expect(listItem.constructor).to.have.length(2);
   });
+
+ it("item should have a method that can check it off the list", () =>{
+    listItem.check.should.be.a.function;
+    listItem.check();
+    listItem.is_done.should.equal(true);
+  });
+
+  it("item should have a method can uncheck it", () =>{
+    listItem.uncheck.should.be.a.function;
+    listItem.uncheck();
+    listItem.is_done.should.equal(false);
+  });
+
+  it("item should have a method that renders it an html list element", () =>{
+    listItem.uncheck.should.be.a.function;
+    expect(listItem.render()).to.contain("<li");
+    expect(listItem.render()).to.contain("/li>");
+    expect(listItem.render()).to.contain("false");
+    expect(listItem.render()).to.contain("bread");
+    expect(listItem.render()).to.contain("made from flower");
+  });
 });
 
 describe('ShoppingList', () => {
@@ -88,26 +109,5 @@ describe('ShoppingList', () => {
 
   it("should have a method render", () => {
     list.render.should.be.a.function;
-  });
-
-  it("item should have a method that can check it off the list", () =>{
-    listItem.check.should.be.a.function;
-    listItem.check();
-    listItem.is_done.should.equal(true);
-  });
-
-  it("item should have a method can uncheck it", () =>{
-    listItem.uncheck.should.be.a.function;
-    listItem.uncheck();
-    listItem.is_done.should.equal(false);
-  });
-
-  it("item should have a method that renders it an html list element", () =>{
-    listItem.uncheck.should.be.a.function;
-    expect(listItem.render()).to.contain("<li");
-    expect(listItem.render()).to.contain("/li>");
-    expect(listItem.render()).to.contain("false");
-    expect(listItem.render()).to.contain("bread");
-    expect(listItem.render()).to.contain("made from flower");
   });
 });
