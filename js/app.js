@@ -20,3 +20,6 @@ function changeCheckedStatus(idx, checkbox) {
   }
 }
 
+function removeItemButton(idx) {
+  // body...
+}
