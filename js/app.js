@@ -10,7 +10,7 @@ function add_to_shopping_list() {
 }
 
 function changeCheckedStatus(idx, checkbox) {
-  var item = ShoppingListItem.item[idx];
+  var item = myShoppingList.item[idx];
   //if the checkbox is checked, invoke shopping_list_items check()
   if(checkbox.checked() === true){
     item.check();
@@ -20,6 +20,7 @@ function changeCheckedStatus(idx, checkbox) {
   }
 }
 
-function removeItemButton(idx) {
-  // body...
+function removeItemButtonClicked(idx) {
+  var item = myShoppingList.item[idx];
+  myShoppingList.removeItem(item);
 }
