@@ -8,3 +8,7 @@ function add_to_shopping_list() {
   myShoppingList.addItem(new_shopping_list_item);
   console.log(myShoppingList);
 }
+
+function changeCheckedStatus(idx, checkbox) {
+  // body...
+}
