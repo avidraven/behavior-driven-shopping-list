@@ -14,6 +14,18 @@ class ShoppingListItem {
   }
 
   render(){
+    var checkboxElement = document.createElement("input");
+    checkboxElement.setAttribute("type", "checkbox");
+    checkboxElement.id = "checkbox";
+    content.appendChild(checkboxElement);
+    checkboxElement.addEventListener("change", changedCheckedStatus);
+
+    var removeElement = document.createElement("button");
+    removeElement.id = "Xbutton";
+    removeElement.innerHTML = "X";
+    content.appendChild(removeElement);
+    removeElement.addEventListener("click", removeItemButtonClicked(idx));
+
     return '<li class="completed_'+ this.is_done + '"><span>' + this.name + '</span><span>' + this.description + '</span></li>';
     }
 }

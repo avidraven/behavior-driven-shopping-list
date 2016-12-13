@@ -50,7 +50,7 @@ describe("ShoppingListItem", () =>{
   });
 
   it("item should have a method that renders it an html list element", () =>{
-    listItem.uncheck.should.be.a.function;
+    listItem.render.should.be.a.function;
     expect(listItem.render()).to.contain("<li");
     expect(listItem.render()).to.contain("/li>");
     expect(listItem.render()).to.contain("false");
