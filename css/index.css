@@ -8,5 +8,11 @@ h1 {
   font-family: helvetica neue;
   padding: 5px;
   font-size: 50px;
-  text-align: center;
+  text-align: left;
+}
+
+form{
+  font-family: helvetica neue;
+  padding: 5px;
+
 }
