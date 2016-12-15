@@ -1,18 +1,33 @@
-body {
-  border-radius: 5px;
-  color: black;
+html {
   background: gray;
 }
 
-h1 {
-  font-family: helvetica neue;
-  padding: 5px;
-  font-size: 50px;
-  text-align: left;
+header{
+  font-family: helvetica;
 }
 
-form{
-  font-family: helvetica neue;
-  padding: 5px;
+body {
+  color: black;
+}
 
+h1 {
+  font-family: helvetica;
+  padding: 1px;
+  font-size: 50px;
+  text-align: center;
+}
+
+form {
+  font-family: helvetica;
+  padding: 5px;
+  font-size: 15px;
+}
+
+button {
+  font-family: helvetica;
+  font-size: 15px;
+}
+
+input {
+  padding: 1px;
 }
