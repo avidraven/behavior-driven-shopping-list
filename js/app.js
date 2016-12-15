@@ -3,6 +3,9 @@ var myShoppingList = new ShoppingList();
 var renderedList = myShoppingList.render();
 content.innerHTML = renderedList;
 
+var addButton = document.getElementById("add_shopping_list_item_button");
+addButton.addEventListener("click", add_to_shopping_list);
+
 function add_to_shopping_list() {
  item_buttons.innerHTML = null;  //added so extra buttons and checkboxes don't show up
  var title = document.getElementById('title').value;
